@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Amadon</title>
+</head>
+<body>
+    <h1>Amadon Store!</h1>
+    
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>Dojo Tshirt</td>
+            <td>$19.99</td>
+            <td>
+                <form action='/main/buy' method='POST'>
+                    {% csrf_token %}
+                    <select name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <input type="hidden" name='product_id' value="1015">
+                    <input type="submit" value="Buy!">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Dojo Sweater</td>
+            <td>$24.99</td>
+            <td>
+                <form action='/main/buy' method='POST'>
+                    {% csrf_token %}
+                    <select name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <input type="hidden" name='product_id' value="1016">
+                    <input type="submit" value="Buy!">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Dojo Cup</td>
+            <td>$4.99</td>
+            <td>
+                <form action='/main/buy' method='POST'>
+                    {% csrf_token %}
+                    <select name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <input type="hidden" name='product_id' value="1017">
+                    <input type="submit" value="Buy!">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Algorith Book</td>
+            <td>$49.99</td>
+            <td>
+                <form action='/main/buy' method='POST'>
+                    {% csrf_token %}
+                    <select name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <input type="hidden" name='product_id' value="1018">
+                    <input type="submit" value="Buy!">
+                </form>
+            </td>
+        </tr>
+            
+        
+    </table>
+</body>
+</html>
